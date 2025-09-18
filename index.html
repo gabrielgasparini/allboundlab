@@ -167,12 +167,8 @@
 
       
       body {
-        position: relative;
-      }
-
-      [data-aos] {
-        overflow: visible !important; /* evita bug do scroll travado */
-      }
+    overflow-x: clip; /* novo valor que não cria área fantasma e não trava o scroll */
+  }
 
       .tptop{
         margin-top: 100px !important;
