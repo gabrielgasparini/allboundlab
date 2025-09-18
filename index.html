@@ -166,8 +166,12 @@
     @media (max-width: 640px) {
 
       
-      html, body {
-        overflow-x: hidden;
+      body {
+        position: relative;
+      }
+
+      [data-aos] {
+        overflow: visible !important; /* evita bug do scroll travado */
       }
 
       .tptop{
@@ -345,7 +349,7 @@
           </div>
 
           <!-- Coluna Direita -->
-          <div class="relative">
+          <div class="relative" data-aos="fade-up" data-aos-duration="1000">
 
             <!-- Imagem principal -->
             <img src="images/Imagem1.png" alt="Imagem prédio" class="rounded-lg shadow-lg w-full object-cover">
