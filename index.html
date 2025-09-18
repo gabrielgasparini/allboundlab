@@ -166,9 +166,9 @@
     @media (max-width: 640px) {
 
       
-      body {
-    overflow-x: clip; /* novo valor que não cria área fantasma e não trava o scroll */
-  }
+      html, body {
+        overflow-x: hidden;
+      }
 
       .tptop{
         margin-top: 100px !important;
@@ -345,7 +345,7 @@
           </div>
 
           <!-- Coluna Direita -->
-          <div class="relative" data-aos="fade-up" data-aos-duration="1000">
+          <div class="relative" data-aos="fade-down" data-aos-duration="1000">
 
             <!-- Imagem principal -->
             <img src="images/Imagem1.png" alt="Imagem prédio" class="rounded-lg shadow-lg w-full object-cover">
@@ -364,6 +364,21 @@
       </div>
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        AOS.init({
+          once: true,
+          startEvent: 'DOMContentLoaded',
+          offset: 100,
+          duration: 1000
+        });
+      });
+
+      window.addEventListener('load', () => {
+        AOS.refresh();
+      });
+    </script>
 
 
     <!-- Seção Page 03 -->
@@ -870,9 +885,5 @@
   setInterval(changeWord, 3000);
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
 
 </html>
