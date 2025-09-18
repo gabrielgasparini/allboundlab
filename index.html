@@ -67,17 +67,27 @@
       opacity: 0.8;
       filter: blur(0.5px);
     }
-    ul.custom-list{
-      list-style: none;
+    ul.custom-list {
+      list-style: none; /* Remove bullets padrão */
+      padding-left: 0;
     }
+
+    ul.custom-list li {
+      position: relative; /* necessário para pseudo-elementos */
+      padding-left: 1.5em; /* espaço para o ícone */
+    }
+
     ul.custom-list li::before {
       content: "✔";
       color: #f530b6;
       font-weight: bold;
-      display: inline-block;
-      width: 1.2em;
-      margin-left: 0em;
+      position: absolute; /* mais confiável no iOS */
+      left: 0;
+      top: 0;
+      line-height: 1; /* ajusta altura do ícone */
+      font-size: 1em; /* ajuste conforme necessário */
     }
+
     .whatsapp-float {
       position: fixed;
       width: 60px;
