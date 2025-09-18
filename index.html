@@ -42,6 +42,13 @@
       font-family: 'Poppins', sans-serif;
       scroll-behavior: smooth;
     }
+
+    .space-y-32 > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-top: calc(7rem * calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(7rem * var(--tw-space-y-reverse));
+    }
+
     .bg-gradient-lilac { background: linear-gradient(135deg, #ede9fe, #ddd6fe); }
     .circle {
       position: absolute;
