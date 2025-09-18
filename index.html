@@ -43,6 +43,16 @@
       scroll-behavior: smooth;
     }
 
+    /* Evita que elementos AOS bloqueiem o scroll no celular */
+    [data-aos] {
+      pointer-events: none;
+    }
+
+    [data-aos].aos-animate {
+      pointer-events: auto;
+    }
+
+
     .space-y-32 > :not([hidden]) ~ :not([hidden]) {
         --tw-space-y-reverse: 0;
         margin-top: calc(7rem * calc(1 - var(--tw-space-y-reverse))) !important;
